@@ -1,0 +1,104 @@
+#find-repair-container input {
+    border-radius: 0.875rem;
+}
+
+#find-repair {
+    background-color: var(--white);
+    border: 2px solid var(--lgtgray);
+}
+
+#find-repair-btn {
+    padding: 0.75rem 1rem;
+    background-color: var(--orange);
+    color: var(--white);
+    position: absolute;
+    right: 0;
+    border-radius: 0.5rem;
+}
+
+#repair-menu {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: none;
+}
+
+.repair-menu-icon-container p {
+    font-weight: 700;
+}
+
+.repair-menu-icon-container img {
+    margin-inline: auto;
+}
+
+.repair-menu-icon-container p {
+    line-height: 1.25;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.near-you-image-container {
+    position: relative;
+}
+
+.near-you-image-container p {
+    position: absolute;
+    max-width: 10rem;
+    top: 60%;
+    transform: translateY(-40%);
+    font-size: 1.375rem;
+    font-weight: 700;
+    left: 1rem;
+    color: var(--white);
+}
+
+.near-you-image {
+    height: 100%;
+    border-radius: 1.375rem;
+}
+
+.master-card-container {
+    position: relative;
+    max-width: fit-content;
+}
+
+.master-card-image {
+    height: 18.75rem !important;
+    border-radius: 1.375rem;
+    object-fit: cover;
+}
+
+.master-card-info {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-40%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+    width: calc(100% - 1rem);
+    margin-inline: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--orange);
+    border-radius: 0.75rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 460px) {
+    .near-you-image {
+        max-width: calc(100vw - 2.5rem);
+    }
+
+    #repair-menu {
+        grid-template-rows: repeat(4, minmax(0, 1fr));
+        grid-template-columns: none;
+    }
+
+    .repair-menu-icon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .master-card-container {
+        margin-inline: auto;
+    }
+}

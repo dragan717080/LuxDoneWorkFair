@@ -1,0 +1,21 @@
+.title {
+    margin-bottom: 0.625rem;
+    padding-left: 1.25rem;
+}
+
+.rounded-box {
+    padding: 0.1875rem 0.5rem;
+    border-radius: 1.6125rem;
+}
+
+form input {
+    background-color: #F5F5F5;
+}
+
+form input[type=text] {
+    padding-left: 0.125rem;
+}
+
+form input[type=text]:focus {
+    outline: none;
+}

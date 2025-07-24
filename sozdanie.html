@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Cool App</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="sozdanie.css">
+</head>
+
+<body>
+    <div id="top" class="col-v">
+        <div class="row-v w-full justify-between">
+            <div class="row t-white flex-1 bold t-22">Создание Задания</div>
+            <div>
+                <div id="burger-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="nav" id="nav-menu">
+                    <ul>
+                        <li><a href="/">Главная страница</a></li>
+                        <li><a href="/categories">Категории</a></li>
+                        <li><a href="/details">Подробнее</a></li>
+                        <li><a href="/master">Мастери</a></li>
+                        <li><a href="/best-masters">Лучшие Мастера</a></li>
+                        <li><a href="/sozdanie">Запросить мастера</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="subtitle t-18 !t-gray-550">
+            Категория: Домашний Мастер
+        </div>
+    </div>
+    <main>
+        <div id="main-upper">
+            <div id="gray-line"></div>
+        </div>
+        <div id="main-lower" class="pb-5">
+            <div>
+                <form>
+                    <div class="col-v gap-5">
+                        <div class="!mt-14 md:!mt-12">
+                            <div class="title">Название Заказа</div>
+                            <div class="rounded-box flex">
+                                <img src="./static/icons/notebook.png" class="h-12 w-12" alt="Название">
+                                <input type="text" name="nazvanie" autocomplete="off" autocapitalize="on">
+                            </div>
+                            <div id="request-name-error" class="error hidden !mt-2 !ml-2">
+                                Пожалуйста напишите название
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="title">Детали Заказа</div>
+                            <h4></h4>
+                            <textarea name="details"
+                                class="rounded-box w-full !py-4 !px-3 !rounded-lg focus:outline-none"
+                                placeholder="Мне нужно покрасить комнату размером 5 на 7 метров в частном доме."></textarea>
+                            <div id="details-error" class="error hidden !mt-2">
+                                Пожалуйста, напишите детали
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="title">Указать Дату и Время</div>
+                            <div class="col-v gap-2.5">
+                                <div id="date-container" class="rounded-box flex gap-5">
+                                    <img src="./static/icons/date-bell.png" class="h-12 w-12" alt="Дата">
+                                    <div class="row">
+                                        <select name="day" class="custom-select">
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17" selected>17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                        <select name="month" class="custom-select !mx-2">
+                                            <option value="01">Января</option>
+                                            <option value="02">Февраля</option>
+                                            <option value="03">Марта</option>
+                                            <option value="04">Апреля</option>
+                                            <option value="05">Мая</option>
+                                            <option value="06">Июня</option>
+                                            <option value="07">Июля</option>
+                                            <option value="08">Августа</option>
+                                            <option value="09">Сентября</option>
+                                            <option value="10">Октября</option>
+                                            <option value="11">Ноября</option>
+                                            <option value="12">Декабря</option>
+                                        </select>
+                                        2025
+                                    </div>
+                                </div>
+                                <div id="time-container" class="rounded-box flex gap-5">
+                                    <img src="./static/icons/hour-clock.png" class="h-12 w-12" alt="Время">
+                                    <div class="row">
+                                        <select name="hour-start" class="custom-select">
+                                            <option value="06" selected>06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                        </select>
+                                        <span class="!mx-1">.</span>
+                                        <select name="minute-start" class="custom-select">
+                                            <option value="00" selected>00</option>
+                                            <option value="05">05</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                            <option value="30">30</option>
+                                            <option value="35">35</option>
+                                            <option value="40">40</option>
+                                            <option value="45">45</option>
+                                            <option value="50">50</option>
+                                            <option value="55">55</option>
+                                        </select>
+                                        <span class="!mx-2.5">-</span>
+                                        <select name="hour-end" class="custom-select">
+                                            <option value="06">06</option>
+                                            <option value="07" selected>07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                        </select>
+                                        <span class="!mx-1">.</span>
+                                        <select name="minute-end" class="custom-select">
+                                            <option value="00" selected>00</option>
+                                            <option value="05">05</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                            <option value="30">30</option>
+                                            <option value="35">35</option>
+                                            <option value="40">40</option>
+                                            <option value="45">45</option>
+                                            <option value="50">50</option>
+                                            <option value="55">55</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="select-time-error" class="error hidden">
+                                    Время окончания должно быть после времени начала
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="title">Фото/Файлы</div>
+                            <div class="row h-28 w-28 !ml-2.5 bg-lgtgray bold t-white rounded-25">
+                                <span class="t-28">+</span>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="title">Адрес Выполнения</div>
+                            <div class="rounded-box flex">
+                                <img src="./static/images/map.png" class="h-12 w-12" alt="Адрес">
+                                <input type="text" name="address" autocomplete="off" autocapitalize="on">
+                            </div>
+                            <div id="address-error" class="error hidden !mt-2 !ml-2">
+                                Пожалуйста напишите свой адрес
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="title">Стоимость Выполнения</div>
+                            <div class="rounded-box flex">
+                                <img src="./static/icons/cash.png" class="size-12" alt="Стоимость">
+                                <div class="row-v">
+                                    <input type="number" name="stoimost" value="5" class="h-12 !w-20" min="5" max="100">
+                                    <span class="">€</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="sozdanie-btn" class="action-btn">Создать Задание</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="base.js"></script>
+    <script type="text/javascript" src="sozdanie.js"></script>
+</body>
+
+</html>

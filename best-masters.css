@@ -1,0 +1,29 @@
+#main-lower {
+    padding-inline: 0.75rem;
+}
+
+.master-card {
+    padding: 0.375rem 0.5rem;
+    color: var(--white);
+    background-color: #1C1C1C;
+    border-radius: 1.5625rem;
+}
+
+.suggest-master-btn {
+    font-size: 0.875rem;
+}
+
+@media screen and (min-width: 460px) {
+    #main-lower {
+        padding-inline: 1.25rem;
+    }
+
+    .master-card {
+        padding-inline: 0.75rem;
+    }
+
+    .suggest-master-btn {
+        padding: 0.625rem 3rem !important;
+        font-size: 1.125rem;
+    }
+}

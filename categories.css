@@ -1,0 +1,5 @@
+@media screen and (max-width: 460px) {
+    #main-lower {
+        padding-inline: 0.5rem;
+    }
+}

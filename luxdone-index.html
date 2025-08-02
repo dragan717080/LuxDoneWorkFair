@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="top">
+        <div class="!ml-auto">
+            <div id="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav" id="nav-menu">
+                <ul>
+                    <li><a href="/">Главная страница</a></li>
+                    <li><a href="/categories">Категории</a></li>
+                    <li><a href="/details">Подробнее</a></li>
+                    <li><a href="/master">Мастери</a></li>
+                    <li><a href="/best-masters">Лучшие Мастера</a></li>
+                    <li><a href="/sozdanie">Запросить мастера</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main>
+        <div id="main-title" class="!min-h-0"></div>
+        <div id="main-upper">
+            <!-- <div id="gray-line"></div> -->
+        </div>
+        <div id="main-lower">
+            <div class="flex flex-col gap-4 px-4">
+                <div class="row">
+                    <img src="./static/images/expert-orange.png" height="110" width="110" alt="logo">
+                </div>
+                <section class="t-orange text-left">
+                    <h3 class="bold t-22 sm:t-26 !md:text-2xl">Lux-done.lu</h3>
+                    <h4 class="bold t-18 sm:t-22 md:text-22 !pt-0.5">Find a Master in 3 Clicks</h4>
+                    <p class="!my-6 !mb-5">We make the world better through connections</p>
+                    <button class="!mt-1 !sm:mt-2 !md:mt-6 !py-2 !px-3.5 bg-orange text-white bold rounded-xl">
+                        <div class="row-v gap-2">
+                            <span>Start</span>
+                            <img src="./static/icons/arrow-top-right-white.svg" height="18" width="18"
+                                alt="icon-top-right">
+                        </div>
+                    </button>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="base.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+form input {
+    background-color: #F5F5F5;
+}
+
+form input[type=text]:focus {
+    outline: none;
+}

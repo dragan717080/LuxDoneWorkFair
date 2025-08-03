@@ -39,7 +39,7 @@ const addBurgerMenuListener = () => {
 addAnchorHandlers = () => {
   Array.from(document.getElementsByTagName('a')).forEach((anchorElement) => {
     const baseUrl = window.location.href.split('/').slice(0, -1).join('/') + '/';
-    const targetUrl = anchorElement.href.split('/').slice(-1)[0];
+    const [targetUrl, urlParams] = anchorElement.href.split('/').slice(-1)[0].split('?');
     let newUrl = baseUrl + targetUrl;
 
     if (targetUrl === '') {
@@ -47,6 +47,10 @@ addAnchorHandlers = () => {
     }
 
     newUrl += '.html';
+    if (urlParams) {
+      newUrl += '?' + urlParams;
+    }
+
     anchorElement.href = newUrl;
   })
 }

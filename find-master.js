@@ -159,9 +159,10 @@ const checkServiceName = () => {
 const hireBtn = document.getElementById('hire-btn');
 hireBtn.addEventListener('click', (e) => {
   hire(e);
+
   const baseUrl = window.location.href.split('/').slice(0, -1).join('/') + '/';
   const urlParams = pascalToKebabCase(serviceName);
-  let targetUrl = baseUrl + `processing.html?service=${urlParams}`;
+  const targetUrl = baseUrl + `processing.html?service=${urlParams}`;
 
   window.location.href = targetUrl;
 });

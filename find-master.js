@@ -1,5 +1,5 @@
 /**
- * Converts kebab case URL params to Pascal Case and replaces dash with space.
+ * Converts kebab-case URL params to Pascal Case and replaces dash with space.
  * 
  * @param {string} input
  * 
@@ -9,6 +9,21 @@ const kebabToPascalCase = (input) => input
   .split('-')
   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
   .join(' ');
+
+
+/**
+ * Converts Pascal Case URL params to kebab-case and replaces space with dash.
+ * 
+ * @param {string} input
+ * 
+ * @returns {string}
+ */
+const pascalToKebabCase = (input) => {
+  return input
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/\s+/g, '-')
+    .toLowerCase();
+};
 
 
 /**
@@ -80,16 +95,6 @@ const checkHoursAndMinutes = () => {
 const hire = (e) => {
   e.preventDefault();
 
-  console.log(serviceName);
-
-  const requestErrorElement = document.getElementById('request-name-error');
-
-  if (!requestMasterName) {
-    requestErrorElement.classList.remove('hidden');
-  } else {
-    requestErrorElement.classList.add('hidden');
-  }
-
   const address = document.querySelector("input[name='address']").value;
   console.log(address);
 
@@ -127,6 +132,7 @@ const hire = (e) => {
   return true;
 }
 
+
 /**
  * Checks service name in URL params.
  *
@@ -151,7 +157,14 @@ const checkServiceName = () => {
 }
 
 const hireBtn = document.getElementById('hire-btn');
-hireBtn.addEventListener('click', (e) => hire(e));
+hireBtn.addEventListener('click', (e) => {
+  hire(e);
+  const baseUrl = window.location.href.split('/').slice(0, -1).join('/') + '/';
+  const urlParams = pascalToKebabCase(serviceName);
+  let targetUrl = baseUrl + `processing.html?service=${urlParams}`;
+
+  window.location.href = targetUrl;
+});
 
 var serviceName;
 
